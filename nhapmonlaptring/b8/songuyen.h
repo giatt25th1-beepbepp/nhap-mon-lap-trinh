@@ -1,0 +1,1 @@
+bool nguyento(int n);
