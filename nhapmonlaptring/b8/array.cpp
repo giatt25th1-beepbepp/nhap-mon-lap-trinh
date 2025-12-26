@@ -65,3 +65,34 @@ void songuyentonhohon100(int b[], int n) {
 	cout << endl;
 	 
 }
+void tonggiatriam(int b[], int n) {
+	int tong = 0;
+	for (int i = 0; i < n; i++) {
+		if (b[i] < 0)
+			tong += b[i];
+	}
+	cout << "tong am: " << tong << endl;
+}
+void sapxep(int b[], int n) {
+	for (int i = 0; i < n - 1; i++)
+		for (int j = i + 1; j < n; j++)
+			if (b[j] < b[i]) {
+				int t = b[j];
+				b[j] = b[i];
+				b[i] = t;
+			}
+}
+int giatrichancuoicung(int b[], int n) {
+	for (int i = n - 1; i>=0 ; i--) {
+		if (b[i] % 2 == 0)
+			return b[i];
+	}
+	return -1;
+}
+int vitrichandautien(int b[], int n) {
+	for (int i = 0; i < n; i++) {
+		if (b[i] % 2 == 0)
+			return i + 1;
+	}
+	return -1;
+}
